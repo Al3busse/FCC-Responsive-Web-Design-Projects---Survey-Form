@@ -1,0 +1,132 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Web development students survey form</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title"> Web Development Students Survey Form </h1>
+      <p id="description"> <em>Help us know why and how you chose your courses</em></p>
+    </header>
+  </div>
+  <div id="surv-form">
+    <form id="survey-form">
+
+      <div id="form-personal-info">
+        <h2>Personal Information:</h2>
+
+        <label for="name" id="name-label">Name</label>
+        <input type="text" name="name" id="name" class="input-pinfo" placeholder="Enter your name" required>
+        <label for="email" id="email-label">Email</label>
+        <input type="email" name="email" id="email" class="input-pinfo" placeholder="example@mail.com" required>
+        <label for="number" id="number-label">Age</label>
+        <input type="number" name="number" id="number" min="1" max="99" class="input-pinfo" placeholder="Age" required>
+
+        <label id="label-max-education">Whats your current level of education?</label>
+        <select id="dropdown" name="education" class="form-control" required>
+          <option value="">Select an option</option>
+          <option value="elementaryschool">Elementary School</option>
+          <option value="highschool">High School</option>
+          <option value="ssociate">Asociate Degree or Certificate</option>
+          <option value="bachelor">Bachellor's Degree</option>
+          <option value="master">Master's Degree</option>
+          <option value="docpostdoc">Doctoral or Post Doctoral studies</option>
+          <option value="other"> Other </option>
+        </select>
+
+        <p id="label-situation">Whats your current situation?</p>
+        <span id="situation-clue">(Check all options that apply)</span>
+        <label>
+          <input name="situation" value="fulltimejob" type="checkbox" class="input-checkbox" />Full-time Job</label>
+        <label>
+          <input name="situation" value="parttimejob" type="checkbox" class="input-checkbox" />Part-time Job</label>
+        <label>
+          <input name="situation" value="fulltimestudent" type="checkbox" class="input-checkbox" />Full-time Student</label>
+        <label>
+          <input name="situation" value="parttimestudent" type="checkbox" class="input-checkbox" />Part-time Student</label>
+      </div>
+
+      <div class="line"></div>
+
+      <div id="career-preferences">
+        <h2>Learning preferences:
+          <!--suggest a better name for the section please-->
+        </h2>
+        <p id="class-method">What class classes method do you prefer?</p>
+        <label>
+          <input checked type="radio" name="classmethod" value="online" />Online classes</label>
+        <label>
+          <input type="radio" name="classmethod" value="presential" />Presential classes</label>
+        <label><input type="radio" name="classmethod" value="selfteaching" />Self-teaching</label>
+
+        <p id="class-style">What style of learning do you prefer?<span></span></p>
+        <label><input checked type="radio" name="learningstyle" value="formal" />Formal (College, University, etc.)</label>
+        <label><input type="radio" name="learningstyle" value="nonformal" />Non-formal (Bootcamps, Online Courses,etc.)</label>
+        <label>
+          <input type="radio" name="learningstyle" value="informal" />Informal (Selfteaching, By experience, etc.) </label>
+
+        <p id="ed-system">What system of education do you prefer?<span></span></p>
+        <label><input checked type="radio" name="edsystem" value="both" />Some Free, some Paid (depending on the level and quality)</label>
+        <label><input type="radio" name="edsystem" value="free" />Free Education</label>
+        <label><input type="radio" name="edsystem" value="paid" />Paid Education</label>
+      </div>
+
+      <div class="line"></div>
+
+      <div id="webdevpref">
+        <h2>Web Development preferences:</h2>
+        <p id="webdevtype">What type of web development do you like the most?</p>
+        <select id="dropdown2" class="form-control" name="developmenttype" required>
+          <option value="">Select an option</option>
+          <option value="frontend">Front-End Web Development</option>
+          <option value="backend">Back-End Web Development</option>
+          <option value="fullstack">Fullstack Web Development</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div>
+        <p id="weblang">Which programming languages do you prefer?</p><span>(Check all options that apply)</span>
+        <label> <input name="language" value="javascript" type="checkbox" class="programing-language" />JavaScript</label>
+        <label><input name="language" value="html/css" type="checkbox" class="programing-language" />HTML/CSS</label>
+        <label> <input name="language" value="sql" type="checkbox" class="programing-language" />SQL</label>
+        <label> <input name="language" value="python" type="checkbox" class="programing-language" />Python</label>
+        <label><input name="language" value="php" type="checkbox" class="programing-language" />PHP</label>
+        <label><input name="language" value="java" type="checkbox" class="programing-language" />Java</label>
+        <label><input name="language" value="c#" type="checkbox" class="programing-language" />C#</label>
+        <label><input name="language" value="c++" type="checkbox" class="programing-language" />C++</label>
+        <label><input name="language" value="typescript" type="checkbox" class="programing-language" />TypeScript</label>
+        <label><input name="language" value="other" type="checkbox" class="programing-language" />Other</label>
+
+        <p id="webframework">Which Web frameworks do you prefer?</p><span>(Check all options that apply)</span>
+
+        <label><input name="framework" value="jquery" type="checkbox" class="web-framework" />jQuery</label>
+        <label><input name="framework" value="react.js" type="checkbox" class="web-framework" />React.js</label>
+        <label><input name="framework" value="angular.js" type="checkbox" class="web-framework" />Angular/Angular.js</label>
+        <label><input name="framework" value="other" type="checkbox" class="web-framework" />Other</label>
+      </div>
+
+      <div class="line"></div>
+
+      <div>
+        <p>Any comments or suggestions?</p>
+        <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+      </div>
+
+      <div>
+        <button type="submit" id="submit" class="submit-button">
+          Submit
+        </button>
+      </div>
+
+    </form>
+  </div>
+  <h2 class="text-center"><span id="thanks">Thank you for your time.</span></h2>
+</body>
+
+</html>
